@@ -508,10 +508,9 @@
 (defun chi-square-cdf (x dof)
   "Adopted from CLASP 1.4.3, http://eksl-www.cs.umass.edu/clasp.html"
   (test-variables (x :posnum) (dof :posint))
-  (multiple-value-bind (cdf ignore)
-      (gamma-incomplete (* 0.5 dof) (* 0.5 x))
-    (declare (ignore ignore))
-    cdf))
+  (gamma-incomplete (* 0.5 dof) (* 0.5 x)))
+
+
    
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
